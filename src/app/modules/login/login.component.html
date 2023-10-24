@@ -6,19 +6,10 @@
         <h1>Login</h1>
       </div>
       <div class="col-12">
-        <input
-          type="text"
-          pInputText
-          formControlName="username"
-          autocomplete="off"
-        />
+        <input type="text" pInputText formControlName="username" autocomplete="off" />
       </div>
       <div class="col-12">
-        <p-password
-          formControlName="password"
-          [feedback]="false"
-          autocomplete="off"
-        ></p-password>
+        <p-password formControlName="password" [feedback]="false" autocomplete="off"></p-password>
       </div>
       <div class="col-12">
         <p-button label="Iniciar sesión" (onClick)="Login()"></p-button>
