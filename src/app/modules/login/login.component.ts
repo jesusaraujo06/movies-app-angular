@@ -48,7 +48,8 @@ export class LoginComponent implements OnInit {
 
     // postService es un observable, entonces podemos suscribirnos
     this._apiService.postService(configPost).subscribe((val) => {
-      console.log(val);
+      const { request_token } = val;
+      sessionStorage.setItem('requestToken', request_token);
     });
   }
 }
