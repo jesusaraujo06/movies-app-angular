@@ -1,1 +1,28 @@
-<p>login works!</p>
+<section>
+  <form [formGroup]="formLogin">
+    <div class="grid mt-4 text-center">
+      <div class="col-12">
+        <img src="{{ imgLogin }}" alt="imgLogin" class="img-login" />
+        <h1>Login</h1>
+      </div>
+      <div class="col-12">
+        <input
+          type="text"
+          pInputText
+          formControlName="username"
+          autocomplete="off"
+        />
+      </div>
+      <div class="col-12">
+        <p-password
+          formControlName="password"
+          [feedback]="false"
+          autocomplete="off"
+        ></p-password>
+      </div>
+      <div class="col-12">
+        <p-button label="Iniciar sesión" (onClick)="Login()"></p-button>
+      </div>
+    </div>
+  </form>
+</section>
