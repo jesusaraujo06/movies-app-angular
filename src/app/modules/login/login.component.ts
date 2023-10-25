@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
-import { ConstantURI } from 'src/app/utils/constantURI';
+import { ConstantsURI } from 'src/app/utils/constantURI';
 import { properties } from 'src/assets/properties/properties';
 
 @Component({
@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
     };
 
     const configPost = {
-      url: ConstantURI.validateWithLogin,
-      params: { api_key: ConstantURI.apiKey },
+      url: ConstantsURI.validateWithLogin,
+      params: { api_key: ConstantsURI.apiKey },
       body: body,
     };
 

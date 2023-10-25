@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
@@ -24,6 +25,7 @@ import { BaseComponent } from './shared/base/base.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    CommonModule,
   ],
   // Aqui se inyectan los servicios o pipes
   providers: [],
