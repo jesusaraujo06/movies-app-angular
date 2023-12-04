@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { BaseComponent } from './shared/base/base.component';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   // Aqui declaramos los componentes que pertenecen a este módulo
@@ -26,6 +27,7 @@ import { BaseComponent } from './shared/base/base.component';
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
+    TagModule
   ],
   // Aqui se inyectan los servicios o pipes
   providers: [],

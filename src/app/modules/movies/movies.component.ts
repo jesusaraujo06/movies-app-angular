@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MoviesModel } from 'src/app/models/movies.model';
 import { ApiService } from 'src/app/services/api.service';
 import { ConstantsURI } from 'src/app/utils/constantURI';
@@ -10,8 +11,12 @@ import { ConstantsURI } from 'src/app/utils/constantURI';
 })
 export class MoviesComponent implements OnInit {
   movies!: MoviesModel.MoviesResponse;
+  movieImg = ConstantsURI.pathImg;
 
-  constructor(private readonly _apiService: ApiService<any>) {}
+  constructor(
+    private readonly _apiService: ApiService<any>,
+    private readonly _router: Router
+  ) {}
 
   ngOnInit(): void {
     const getConfig = {
@@ -26,5 +31,7 @@ export class MoviesComponent implements OnInit {
       });
   }
 
-  seeDetail(): void {}
+  seeDetail(id: number): void {
+    this._router.navigate([`popular/detail/${id}`])
+  }
 }

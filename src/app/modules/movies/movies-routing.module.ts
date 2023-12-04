@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MoviesComponent } from './movies.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 const routes: Routes = [
   {
@@ -8,6 +9,10 @@ const routes: Routes = [
     component: MoviesComponent,
   },
   {
+    path: 'detail/:id',
+    component: MovieDetailComponent,
+  },
+  { 
     path: '**',
     pathMatch: 'full',
     redirectTo: '',
